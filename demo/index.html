@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 </head>
 <body ng-controller="appCtrl">
-	<textarea ng-model="data" enter-submit="getData()"></textarea>
+	<textarea ng-model="data" ng-textarea-enter="getData()"></textarea>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 	<script src="../build/ng-textarea-enter.min.js"></script>
 	<script>
@@ -14,7 +14,7 @@
 
 		app.controller('appCtrl',['$scope', function($scope) {
 			$scope.getData = function() {
-				alert($scope.data);
+				console.log($scope.data);
 			};
 		}]);
 	</script>

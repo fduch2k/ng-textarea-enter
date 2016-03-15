@@ -5,7 +5,7 @@
 */
 
 "use strict";
-angular.module('ng-textarea-enter', []).directive('enterSubmit', function() {
+angular.module('ng-textarea-enter', []).directive('ngTextareaEnter', function() {
 	return {
 		restrict: 'A',
 		link: function(scope, elem, attrs) {
@@ -17,16 +17,17 @@ angular.module('ng-textarea-enter', []).directive('enterSubmit', function() {
 		    	// Detecting enter key press
 		       	if (code === 13) {
 
-
+		       		// Checking element to be textarea
 		       		if(elem[0].type == 'textarea') {
+
+		       			// Checking scope model to be valid
 		       			if(scope[attrs.ngModel] != undefined && scope[attrs.ngModel] != '') {
 
 		       				// Detecting shift/ctrl/alt key press
 				       		if (!event.shiftKey && !event.ctrlKey && !event.altKey) {
 				           		event.preventDefault();
-				               	scope.$apply(attrs.enterSubmit);
+				               	scope.$apply(attrs.ngTextareaEnter);
 				            }
-
 		       			}
 		       		}
 		       	}
