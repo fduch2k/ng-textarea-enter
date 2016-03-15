@@ -16,11 +16,19 @@ angular.module('ng-textarea-enter', []).directive('enterSubmit', function() {
 
 		    	// Detecting enter key press
 		       	if (code === 13) {
-		       		// Detecting shift/ctrl/alt key
-		       		if (!event.shiftKey && !event.ctrlKey && !event.altKey) {
-		           		event.preventDefault();
-		               	scope.$apply(attrs.enterSubmit);
-		            }
+
+
+		       		if(elem[0].type == 'textarea') {
+		       			if(scope[attrs.ngModel] != undefined && scope[attrs.ngModel] != '') {
+
+		       				// Detecting shift/ctrl/alt key press
+				       		if (!event.shiftKey && !event.ctrlKey && !event.altKey) {
+				           		event.preventDefault();
+				               	scope.$apply(attrs.enterSubmit);
+				            }
+
+		       			}
+		       		}
 		       	}
 		    });
 		}
