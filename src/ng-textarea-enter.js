@@ -1,9 +1,8 @@
 /*
-    ng-textarea-enter v0.3.1
+    ng-textarea-enter v0.1.4
     Copyright (c) 2016 Arun Michael Dsouza (amdsouza92@gmail.com)
     Licence: MIT
 */
-
 "use strict";
 angular.module('ng-textarea-enter', []).directive('ngTextareaEnter', function() {
 	return {

@@ -1,6 +1,6 @@
 {
   "name": "ng-textarea-enter",
-  "version": "0.3.1",
+  "version": "0.1.4",
   "description": "AngularJS Module to enable action trigger for textarea on pressing the 'enter' key",
   "main": "Gruntfile.js",
   "scripts": {
