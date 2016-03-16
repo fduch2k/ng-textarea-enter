@@ -6,15 +6,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 </head>
 <body ng-controller="appCtrl">
-	<textarea ng-model="data" ng-textarea-enter="getData()"></textarea>
+	<textarea ng-model="textareaModel" ng-textarea-enter="textareaAction()"></textarea>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 	<script src="../build/ng-textarea-enter.min.js"></script>
 	<script>
 		var app = angular.module('app', ['ngTextareaEnter']);
 
 		app.controller('appCtrl',['$scope', function($scope) {
-			$scope.getData = function() {
-				console.log($scope.data);
+			$scope.textareaAction = function() {
+				console.log($scope.textareaModel);
 			};
 		}]);
 	</script>
