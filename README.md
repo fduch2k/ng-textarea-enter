@@ -9,7 +9,13 @@ To create usual newlines, a combination of ``shift+enter``, ``ctrl+enter`` and `
 
 ## Installation
 
-[download](https://github.com/ArunMichaelDsouza/ng-textarea-enter/releases) the latest version and include ``ng-textarea-enter.min.js`` to your project.
+#### via npm
+
+```html
+npm install ng-textarea-enter
+```
+
+Or, [download](https://github.com/ArunMichaelDsouza/ng-textarea-enter/releases) the latest version and include ``ng-textarea-enter.min.js`` to your project.
 
 Add ``ngTextareaEnter`` as a dependency in your angular app module.
 
@@ -32,7 +38,7 @@ myApp.controller('myCtrl', ['$scope', function($scope) {
 }]);
 ```
 
-Now everytime ``enter`` key is pressed against this textarea the value in scope variable ``textareaModel`` will be available in the controller via ``textareaAction()``.
+Now everytime ``enter`` key is pressed against this textarea, the ``textareaAction()`` will be called. In this case it is logging out the value in scope variable ``textareaModel``.
 
 ## License
 
