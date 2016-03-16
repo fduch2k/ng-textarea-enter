@@ -1,4 +1,4 @@
-# ng-textarea-enter [v0.1.4]
+# ng-textarea-enter [v0.1.5]
 AngularJS Module to enable action trigger for textarea on pressing the ``enter`` key. 
 
 It removes the default behaviour of creating a new line, when ``enter`` key is pressed against any textarea element, instead as soon as the ``enter`` key is pressed, the method attached to the directive can be called and can be used to access the model associated with the textarea element. 
