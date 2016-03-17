@@ -46,7 +46,7 @@ myApp.controller('myCtrl', ['$scope', function($scope) {
 }]);
 ```
 
-Now everytime ``enter`` key is pressed against this textarea, the ``textareaAction()`` will be called. In this case it is logging out the value in scope variable ``textareaModel``.
+Now everytime ``enter`` key is pressed against this textarea, the ``textareaAction()`` will be called. In this case it is logging the value of scope variable ``textareaModel`` out to the console.
 
 ## License
 
