@@ -9,6 +9,14 @@ To create usual newlines, a combination of ``shift+enter``, ``ctrl+enter`` and `
 
 ## Installation
 
+#### CDN 
+
+Use ng-textarea-enter directly from jsdelivr CDN
+
+```html
+https://cdn.jsdelivr.net/angular.textarea-enter/0.1.5/ng-textarea-enter.min.js
+```
+
 #### via bower
 
 You can install the package using bower. Make sure you have bower installed, then run : 
