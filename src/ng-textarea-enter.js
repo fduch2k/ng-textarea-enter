@@ -7,6 +7,7 @@
 "use strict";
 angular.module('ngTextareaEnter', []).directive('ngTextareaEnter', function() {
 	return {
+		require: 'ngModel',
 		restrict: 'A',
 		link: function(scope, elem, attrs) {
 
@@ -20,15 +21,11 @@ angular.module('ngTextareaEnter', []).directive('ngTextareaEnter', function() {
 		       		// Checking element to be textarea
 		       		if(elem[0].type == 'textarea') {
 
-		       			// Checking scope model to be valid
-		       			if(scope[attrs.ngModel] != undefined && scope[attrs.ngModel] != '') {
-
-		       				// Detecting shift/ctrl/alt key press
-				       		if (!event.shiftKey && !event.ctrlKey && !event.altKey) {
-				           		event.preventDefault();
-				               	scope.$apply(attrs.ngTextareaEnter);
-				            }
-		       			}
+					// Detecting shift/ctrl/alt key press
+					if (!event.shiftKey && !event.ctrlKey && !event.altKey) {
+						event.preventDefault();
+						scope.$apply(attrs.ngTextareaEnter);
+					}		    
 		       		}
 		       	}
 		    });
